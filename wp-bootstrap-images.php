@@ -33,8 +33,13 @@ class WP_Bootstrap_Images {
 	 * @param mixed $class Classes.
 	 * @return $class Classes.
 	 */
-	function responsive_image_class( $class ) {
+	function image_responsive_class( $class ) {
 		$class .= ' img-responsive';
+		return $class;
+	}
+	
+	function image_rounded_class( $class ) {
+		$class .= ' img-rounded';
 		return $class;
 	}
 }
