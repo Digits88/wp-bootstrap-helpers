@@ -22,7 +22,8 @@ class WP_Bootstrap_Images {
 	 */
 	public function __construct() {
 
-		// add_filter( 'get_image_tag_class', array( $this, 'responsive_image_class' ) );
+		// Uncomment to auto add Responsive class to all images.
+		// add_filter( 'get_image_tag_class', array( $this, 'image_responsive_class' ) );
 
 	}
 
@@ -37,9 +38,40 @@ class WP_Bootstrap_Images {
 		$class .= ' img-responsive';
 		return $class;
 	}
-	
+
+	/**
+	 * image_rounded_class function.
+	 *
+	 * @access public
+	 * @param mixed $class
+	 * @return void
+	 */
 	function image_rounded_class( $class ) {
 		$class .= ' img-rounded';
+		return $class;
+	}
+
+	/**
+	 * image_circle_class function.
+	 *
+	 * @access public
+	 * @param mixed $class
+	 * @return void
+	 */
+	function image_circle_class( $class ) {
+		$class .= ' img-circle';
+		return $class;
+	}
+
+	/**
+	 * image_thumbnail_class function.
+	 *
+	 * @access public
+	 * @param mixed $class
+	 * @return void
+	 */
+	function image_thumbnail_class( $class ) {
+		$class .= ' img-thumbnail';
 		return $class;
 	}
 }
